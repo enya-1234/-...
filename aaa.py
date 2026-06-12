@@ -19,7 +19,7 @@ site = que.get("site")
 
 if site == "site1":
     
-    st.title("site1")
+    st.title("물리 - 아이작 뉴턴")
     
     st.markdown(
     """
@@ -62,11 +62,11 @@ if site == "site1":
                 )""",
                 key = f"save_site{site}"
             )
-        st.success("축하드립니다! 카드를 수집하샸ㅅ,ㅂㄴ;디")
+        st.success("축하드립니다! 카드를 수집하셨습니다.")
     st.link_button("Linkkkkk]", "https://www.science.org/")
     
 if site == "site2":
-    st.title("site2")
+    st.title("컴퓨터 과학 - 앨런 튜링")
 
     file_path1 = Path("sciencego.png")
     img = Image.open(file_path1)
@@ -98,11 +98,11 @@ if site == "site2":
                 )""",
                 key = f"save_site{site}"
             )
-        st.success("축하드립니다! 카드를 수집하샸ㅅ,ㅂㄴ;디")
+        st.success("축하드립니다! 카드를 수집하셨습니다.")
     st.link_button("Linkkkkk]", "https://www.science.org/")
     
 if site == "site3":
-    st.title("site3")
+    st.title("생명과학 - 히포크라테스")
 
     file_path = Path("ht333.png")
     file_content = file_path.read_bytes()
@@ -134,7 +134,7 @@ if site == "site3":
                 )""",
                 key = f"save_site{site}"
             )
-        st.success("축하드립니다! 카드를 수집하샸ㅅ,ㅂㄴ;디")
+        st.success("축하드립니다! 카드를 수집하셨습니다.")
     st.link_button("Linkkkkk]", "https://www.science.org/")
     
 if site == "site4":
