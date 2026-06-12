@@ -99,7 +99,7 @@ if site == "site2":
                 key = f"save_site{site}"
             )
         st.success("축하드립니다! 카드를 수집하셨습니다.")
-    st.link_button("Linkkkkk]", "https://www.science.org/")
+    st.link_button("Link", "https://www.science.org/")
     
 if site == "site3":
     st.title("생명과학 - 히포크라테스")
@@ -138,13 +138,13 @@ if site == "site3":
     st.link_button("Linkkkkk]", "https://www.science.org/")
     
 if site == "site4":
-    st.title("site4")
+    st.title("지구과학 - 알프레드 베게너")
 
     file_path1 = Path("sciencego.png")
     img = Image.open(file_path1)
     st.image(img)
 
-    file_path = Path("ht444.png")
+    file_path = Path("ht555.png")
     file_content = file_path.read_bytes()
 
     
@@ -156,42 +156,6 @@ if site == "site4":
     - 그의 이론은 훗날 판구조론의 발전에 중요한 기반이 되었다.
     ''')
 
-    if st.download_button(
-        label = "Download image",
-        data = file_content,
-        file_name = "444.png",
-        mime = "image/png"
-    ):
-        if site not in progress:
-            progress[site] = True
-            streamlit_js_eval(
-                js_expressions = f"""localStorage.setItem(
-                    'progress',
-                    '{json.dumps(progress)}'
-                )""",
-                key = f"save_site{site}"
-            )
-        st.success("축하드립니다! 카드를 수집하샸ㅅ,ㅂㄴ;디")
-    st.link_button("Linkkkkk]", "https://www.science.org/")
-
-if site == "site5":
-    st.title("site5")
-
-    file_path1 = Path("sciencego.png")
-    img = Image.open(file_path1)
-    st.image(img)
-    
-    file_path = Path("ht555.png")
-    file_content = file_path.read_bytes()
-
-    expander = st.expander("See explanation")
-    expander.write('''
-    <마리 퀴리>
-    - 방사능 연구를 개척하여 새로운 연구 분야를 열었다.
-    - 폴로늄과 라듐을 발견해 원자 연구의 발전에 기여했다.
-    - 물리학상과 화학상 두 분야에서 노벨상을 수상한 최초의 인물이 되었다
-    ''')
-    
     if st.download_button(
         label = "Download image",
         data = file_content,
@@ -207,7 +171,43 @@ if site == "site5":
                 )""",
                 key = f"save_site{site}"
             )
-        st.success("축하드립니다! 카드를 수집하샸ㅅ,ㅂㄴ;디")
+        st.success("축하드립니다! 카드를 수집하셨습니다.")
+    st.link_button("Linkkkkk]", "https://www.science.org/")
+
+if site == "site5":
+    st.title("화학 - 마리 퀴리")
+
+    file_path1 = Path("sciencego.png")
+    img = Image.open(file_path1)
+    st.image(img)
+    
+    file_path = Path("ht444.png")
+    file_content = file_path.read_bytes()
+
+    expander = st.expander("See explanation")
+    expander.write('''
+    <마리 퀴리>
+    - 방사능 연구를 개척하여 새로운 연구 분야를 열었다.
+    - 폴로늄과 라듐을 발견해 원자 연구의 발전에 기여했다.
+    - 물리학상과 화학상 두 분야에서 노벨상을 수상한 최초의 인물이 되었다
+    ''')
+    
+    if st.download_button(
+        label = "Download image",
+        data = file_content,
+        file_name = "444.png",
+        mime = "image/png"
+    ):
+        if site not in progress:
+            progress[site] = True
+            streamlit_js_eval(
+                js_expressions = f"""localStorage.setItem(
+                    'progress',
+                    '{json.dumps(progress)}'
+                )""",
+                key = f"save_site{site}"
+            )
+        st.success("축하드립니다! 카드를 수집하셨습니다.")
     st.link_button("Linkkkkk]", "https://www.science.org/")
     
 count = sum(1 for i in range(5) if progress.get(f"site{i+1}"))
